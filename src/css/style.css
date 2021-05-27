@@ -1,0 +1,178 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    font-size: 14px;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+  }
+  
+#container {
+  position: relative;
+  margin: 0 auto;
+  padding: 50px;
+  width: 50%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+
+}
+
+#chat-window {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#users {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  padding: 20px;
+  box-sizing: border-box;
+
+  background: rgb(185, 226, 224);
+  border-top-left-radius: 10px;
+}
+
+#users span {
+  width:100%;
+  display: list-item;
+
+  margin-left: 20px;
+  list-style-type: '😜';
+}
+
+#messages {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px;
+  box-sizing: border-box;
+
+  background: rgba(185, 226, 224, 0.63);
+  border-top-right-radius: 10px;
+}
+
+#messages .span {
+  width: 100%;
+}
+
+#messages .loginmessage {
+  color:darkgreen;
+}
+
+#messages .logoutmessage {
+  color:rgb(100, 3, 0);
+}
+
+#messages .you {
+  text-align: right;
+}
+
+#message .name {
+  font-weight: bold;
+}
+
+#message-form {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#message-text {
+  width: 100%;
+  padding: 20px;
+
+  background: rgba(185, 226, 224, 0.836);
+
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#message-form button {
+  width:25%;
+  margin: 0 10px;
+  line-height: 30px;
+
+  border: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#message-form #send {
+  background-color: rgb(94, 116, 114);
+  color: #fff;
+}
+
+#message-form #clear {
+  background-color: rgb(116, 94, 101);
+  color: #fff;
+}
+
+#message-text, #message-text:focus {
+  outline: 0;
+  border: 0;
+}
+
+
+#login-window {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.5);
+  height: 100vh;
+  z-index: 1000;
+  margin:0;
+  padding:0;
+  top:0;
+  left:0;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px;
+
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+#login-form input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-bottom: 10px;
+
+  background: rgb(212, 212, 212);
+
+  outline: 0;
+  border: 0;
+  border-radius: 10px;
+}
+
+#login-form button {
+  line-height: 20px;
+
+  border: 0px;
+  border-radius: 10px;
+}
+
+#login-form span {
+  padding: 10px;
+}
