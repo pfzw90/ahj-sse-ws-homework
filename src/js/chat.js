@@ -67,15 +67,20 @@ export default class Chat {
     msg.className = 'message';
     msg.className = type;
 
-    msg.innerHTML = `<span class="time">${time} | </span>
-        <span>${user}</span>
-        <span>: ${message}</span>`;
+    const msgTime = document.createElement('span');
+    msgTime.innerText = `${time} | `;
+    const msgUser = document.createElement('span');
+    msgUser.innerText = user;
+    const msgMessage = document.createElement('span');
+    msgMessage.innerText = `: ${message}`;
 
+    msg.append(msgTime, msgUser, msgMessage);
     this.messages.insertAdjacentElement('beforeend', msg);
   }
 
   connect() {
-    this.ws = new WebSocket('ws://localhost:7070/ws');
+    this.ws = new WebSocket('ws://ws-homework.herokuapp.com:7070/ws');
+    console.log(this.ws)
 
     this.ws.addEventListener('open', () => {
       document.body.appendChild(this.loginWindow);
