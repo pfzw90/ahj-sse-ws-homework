@@ -58,4 +58,4 @@ wsServer.on('connection', (ws) => {
   });
 });
 
-server.listen();
+server.listen(port);

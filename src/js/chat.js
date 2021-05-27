@@ -79,7 +79,7 @@ export default class Chat {
   }
 
   connect() {
-    this.ws = new WebSocket('wss://ws-homework.herokuapp.com');
+    this.ws = new WebSocket('wss://ws-homework.herokuapp.com/ws');
     console.log(this.ws)
 
     this.ws.addEventListener('open', () => {
