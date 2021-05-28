@@ -128,7 +128,7 @@ export default class Chat {
           break;
 
         case 'userLogin':
-          this.users.insertAdjacentText('beforeend', `<span>${data.user}</span>`);
+          this.users.insertAdjacentElement('beforeend', document.createElement('span', {innerText: data.user}));
           this.showMessage(data.time, data.user, 'Пользователь зашел в чат.', 'loginmessage');
           break;
 
