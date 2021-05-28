@@ -65,7 +65,8 @@ body {
 }
 
 #messages .span {
-  width: 100%;
+  max-width: 100%;
+  word-wrap: break-word;
 }
 
 #messages .loginmessage {
