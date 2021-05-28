@@ -94,7 +94,7 @@ export default class Chat {
 
     this.ws.addEventListener('message', (evt) => {
       const data = (JSON.parse(evt.data));
-
+      let newUser;
       switch (data.type) {
         case 'login':
           if (data.success === 'false') {
@@ -128,7 +128,9 @@ export default class Chat {
           break;
 
         case 'userLogin':
-          this.users.insertAdjacentElement('beforeend', document.createElement('span', {innerText: data.user}));
+          newUser = document.createElement('span');
+          newUser.innerText = data.user;
+          this.users.insertAdjacentElement('beforeend', newUser);
           this.showMessage(data.time, data.user, 'Пользователь зашел в чат.', 'loginmessage');
           break;
 
