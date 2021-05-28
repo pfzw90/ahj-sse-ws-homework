@@ -80,7 +80,6 @@ export default class Chat {
 
   connect() {
     this.ws = new WebSocket('wss://ws-homework.herokuapp.com/ws');
-    console.log(this.ws)
 
     this.ws.addEventListener('open', () => {
       document.body.appendChild(this.loginWindow);
