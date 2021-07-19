@@ -1,9 +1,9 @@
 {
-  "name": "ahj-ws-homework",
+  "name": "ahj-diploma",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "prestart": "npm install",
+    "prestart": "yarn",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev-server": "forever server.js",
     "dev-server-watch": "forever -w server.js",
@@ -11,21 +11,22 @@
     "start": "webpack serve --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js"
   },
-  "engines": {
-    "node": "10.x"
-  },
   "author": "Chekhonina N.",
   "license": "ISC",
   "dependencies": {
+    "byte-size": "^8.0.0",
     "http-event-stream": "^0.2.0",
     "koa": "^2.13.1",
     "koa-body": "^4.2.0",
+    "koa-bodyparser": "^4.3.0",
     "koa-router": "^10.0.0",
+    "koa-static": "^5.0.0",
     "koa2-cors": "^2.0.6",
     "license-webpack-plugin": "^2.3.18",
     "uuid": "^8.3.2",
     "webpack": "^4.46.0",
-    "ws": "^7.4.5"
+    "ws": "^7.5.0",
+    "yarn": "^1.22.10"
   },
   "devDependencies": {
     "@babel/cli": "^7.13.16",

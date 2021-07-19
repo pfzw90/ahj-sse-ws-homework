@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
-import Chat from './js/chat'
 import './css/style.css';
+import Organizer from './js/engine/organizerEngine';
 
-const chat = new Chat();
-chat.connect();
+const organizer = new Organizer();
+organizer.bind();
+organizer.connect();
